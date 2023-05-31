@@ -1,0 +1,617 @@
+*:root{
+
+    --fuentePrincipal: 'Poppins', sans-serif;
+    --fuenteHeadings: 'Alegreya Sans', sans-serif;;
+    --colorprincipal:#00A54F;
+    --negro: #000000;
+    --blanco: #ffffff;
+    --oscuro:#222222;
+    --rojo: #FC042C;
+    --secundario: rgba(252,44,44,0.5);
+    --negro2:rgba(0,0,0,0.60);
+    --verdesecundario:#B7E80F; 
+
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;/*1 rem = 10px*/
+}
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+.bk-body{
+    background-color: var(--colorprincipal);
+}
+/** Globales **/
+.contenedor{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+.contenedor__navegacion{
+    width: min(95%, 140rem);
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeadings);
+    line-height: 1.2;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.5rem;
+}
+img{
+    max-width: 100%;
+}
+
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centar-texto{
+    text-align: center;
+}
+
+/**hader**/
+.header{
+   padding: 2rem;
+   background-color:var(--rojo);
+}
+.logo{
+    margin: 0 auto;
+    display:block;
+    height: 20rem;
+}
+
+/**Navegacion**/
+.nevegacion__menu{
+    display: block;
+    padding: 2rem 1rem;
+    color: var(--blanco);
+    font-weight: bold;
+    margin: 0 auto;
+}
+.nevegacion__menu:hover{
+    background-color: var(--secundario);
+}
+@media (min-width: 960px) {
+    .barra{
+        background-color: rgba(0,0,0,0.8);
+    }
+    .navegacion{
+        display: flex;
+        justify-content: flex-start;
+        text-align: center;
+        align-items:center;
+        font-size: 1.5rem;
+    }
+
+}
+@media (max-width: 960px){
+    .nevegacion__menu{
+        padding: 1rem 1rem;
+    }
+    .barra{
+        background-color: rgba(0,0,0,0.8);
+    }
+    .navegacion{
+        text-align: center;
+        align-items:center;
+        font-size: 1.5rem;
+    }
+}
+/**Contenido Principal**/
+.titlo__principal{
+    color: var(--blanco);
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+.contenido__info{
+    padding-bottom: 4rem;
+}
+.titulo__info{
+    color: var(--blanco);
+    text-transform: uppercase;
+    text-align: center;
+}
+.imagen__info{
+    margin: 0 auto;
+    display: block;
+}
+.titlo__final{
+    color: var(--blanco);
+    text-transform: uppercase;
+    text-align: center;
+}
+.titulo__menu-verde{
+    color: var(--colorprincipal);
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .contenido__principal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    .contenido__principal-3colum{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    .contenido__info--column{
+        grid-column: 1/3;
+    }
+    .contenido__principal--menu{
+        margin-top: 1rem;
+    }
+}
+/*Carta Pizzas*/
+.titulo__carta{
+    text-transform: uppercase;
+    color: var(--colorprincipal);
+    text-align: center; 
+}
+.contenido__menu{
+    position: absolute;
+    background-color: rgba(12, 3, 3, 0.6);
+    width: 100%;
+    height: 100%;
+}
+/*img--Pizza1*/
+.imagen__pizza1{
+    background-image: url(../img/pizza1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 65rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__pizza1{
+        height: 40rem;
+    }
+
+}
+@media (max-width: 335px) {
+    .imagen__pizza1--max280{
+        height: 75rem;
+    }
+}
+/*img--Pizza2*/
+.imagen__pizza2{
+    background-image: url(../img/pizza2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 270rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__pizza2{
+        height: 160rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__pizza2--max280{
+        height: 300rem;
+    }
+}
+/*img--Pizza3*/
+.imagen__pizza3{
+    background-image: url(../img/pizza3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 150rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__pizza3{
+        height: 90rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__pizza3--max280{
+        height: 190rem;
+    }
+}
+/*img--Pizza4*/
+.imagen__pizza4{
+    background-image: url(../img/pizza4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 55rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__pizza4{
+        height: 40rem;
+    }
+
+}
+@media (max-width: 335px) {
+    .imagen__pizza4--max280{
+        height: 70rem;
+    }
+}
+.pizza_grande{
+    display: flex;
+    justify-content: center;
+}
+.pizza_grande-contenido{
+    margin: 2rem 0;
+    background-color: var(--oscuro);
+    width: 80%;
+    height: 100rem;
+    border-radius: 2rem;
+    padding: 0 1.5rem;
+}
+@media (min-width: 768px) {
+    .pizza_grande-contenido{
+        height: 50rem;
+    }
+}
+@media (max-width: 335px) {
+    .pizza_grande-contenido--max280{
+        height: 85rem;
+    }
+    .titulo__menu-combo{
+        font-size: 3rem;
+    }
+}
+
+/**Producto**/
+.titulo__menu{
+    padding-top: 2rem;
+    color: var(--blanco);
+    text-align: center;
+    margin: 0;
+}
+.precio__menu{
+    margin: 0rem;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--colorprincipal);
+    text-align: center;
+}
+.descripcion__menu{
+    margin-top: 0.5rem;
+    color: var(--blanco);
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.descipcion__menu-verde{
+    margin: 0;
+    text-align: center;
+    color: var(--colorprincipal);
+}
+/**footer**/
+.footer{
+    background-color: var(--oscuro);
+    height: 25rem;
+}
+
+.imagen__footer{
+    margin-top: 2rem;
+    display: block;
+    margin: 0 auto;
+}
+.footer_titulo{
+    padding-top: 3rem;
+}
+.footer_titulo,
+.link_footer{
+    color: var(--blanco);
+    font-size: 2.5rem;
+    text-align: center;
+}
+.texto__footer{
+    color: var(--blanco);
+    text-align: center;
+    font-size: 2rem;
+}
+/*Estofadas 1*/
+.imagen__estofada1{
+    background-image: url(../img/estofada1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__estofada1{
+        height: 20rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__estofada1-max280{
+        height: 50rem;
+    }
+}
+/*Estofadas 2*/
+.imagen__estofada2{
+    background-image: url(../img/estofada2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__estofada2{
+        height: 60rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__estofada2--max280{
+        height: 140rem;
+    }
+}
+/*sandwich*/
+.imagen__sandwich{
+    background-image: url(../img/sandwich.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 240rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__sandwich{
+        height: 130rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__sandwich--max280{
+        height: 260rem;
+    }
+}
+/*Hamburguesa1*/
+.imagen__hamburguesa1{
+    background-image: url(../img/hamburguesa1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__hamburguesa1{
+        height: 50rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__hamburguesa1--max280{
+        height: 110rem;
+    }
+}
+/*Hamburguesa2*/
+.imagen__hamburguesa2{
+    background-image: url(../img/hamburguesa2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__hamburguesa2{
+        height: 50rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__hamburguesa2--max280{
+        height: 110rem;
+    }
+}
+/*Hamburguesa3*/
+.imagen__hamburguesa3{
+    background-image: url(../img/hamburguesa3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__hamburguesa3{
+        height: 30rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__hamburguesa3--max280{
+        height: 70rem;
+    }
+}
+/*Perros*/
+.imagen__perro{
+    background-image: url(../img/perros.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__perro{
+        height: 70rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__perro--max280{
+        height: 120rem;
+    }
+}
+/*lasagna*/
+.imagen__lasagna{
+    background-image: url(../img/lasagna.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__lasagna{
+        height: 50rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__lasagna--max280{
+        height: 90rem;
+    }
+}
+/*maiz*/
+.imagen__maiz{
+    background-image: url(../img/maiz.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 30rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__maiz{
+        height: 30rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__maiz--max280{
+        height: 50rem;
+    }
+}
+/*salchicha*/
+.imagen__salchicha{
+    background-image: url(../img/salchicha.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 120rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__salchicha{
+        height: 80rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__salchicha--max280{
+        height: 140rem;
+    }
+}
+/*asados*/
+.imagen__asados{
+    background-image: url(../img/asados.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 180rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__asados{
+        height: 100rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__asados--max280{
+        height: 210rem;
+    }
+}
+/*ensaladas*/
+.imagen__ensalada{
+    background-image: url(../img/ensalada.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__ensalada{
+        height: 30rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__ensalada--max280{
+        height: 60rem;
+    }
+}
+/*Bebidas Frías*/
+.imagen__frias{
+    background-image: url(../img/frias.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 140rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__frias{
+        height: 85rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__frias--max280{
+        height: 185rem;
+    }
+}
+/*Bebidas Calientes*/
+.imagen__calientes{
+    background-image: url(../img/calientes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50rem;
+    position: relative;
+
+}
+@media (min-width: 768px) {
+    .imagen__calientes{
+        height: 30rem;
+    }
+}
+@media (max-width: 335px) {
+    .imagen__calientes--max280{
+        height: 60rem;
+    }
+}
